@@ -4,7 +4,7 @@ import { isNoEthereumObject } from "./lib/errors";
 
 import "./styles.css";
 
-export default function App() {
+export default function ConnectWallet() {
   const { chainId, account, active, activate, deactivate } = useWeb3React();
 
   const handleConnect = () => {
