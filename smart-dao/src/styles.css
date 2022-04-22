@@ -1,0 +1,18 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .user {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .connect {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  

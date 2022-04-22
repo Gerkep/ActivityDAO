@@ -2,4 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js'
 
-export default ReactDOM.render(<App />, document.querySelector("#root"))
+import { Web3ReactProvider } from "@web3-react/core"; //for ConnectWallet component
+import { Web3Provider } from "@ethersproject/providers"; //for ConnectWallet component
+
+function getLibrary(provider) { ////for ConnectWallet component
+    const library = new Web3Provider(provider, "any");
+    return library;
+  }
+
+export default ReactDOM.render(
+    <Web3ReactProvider getLibrary={getLibrary}>
+        <App />
+    </Web3ReactProvider>
+    , document.querySelector("#root")
+    
+)
