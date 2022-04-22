@@ -1,11 +1,14 @@
 import React from "react";
+class App extends React.Component {
 
-const App = () => {
-    return(
-        <div>
-            SmartDAO app
-        </div>
-    )
+    render(){
+        return(
+            <div>
+                Welcome to SmartDAO
+            </div>
+        )
+    
+    }
 }
 
 export default App;
