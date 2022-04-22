@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js'
 
+
 import { Web3ReactProvider } from "@web3-react/core"; //for ConnectWallet component
 import { Web3Provider } from "@ethersproject/providers"; //for ConnectWallet component
 
@@ -17,3 +18,4 @@ export default ReactDOM.render(
     , document.querySelector("#root")
     
 )
+
