@@ -27,12 +27,12 @@ const MainPage = (props) => {
           fields.map(item =>{
               return (
               <div><label>{item.name}</label>
-              <div>asass</div></div> )
+              <div onChange={()=>{setNewDAOName()}}>asass</div></div> )
           })
       }
       <button
         onClick={async () => {
-          await performTx(library,account, '0x7fCA0CbB525917C6fC0548676BFFC02A7c1f508B',account,'name',[]);
+          await performTx(library,account, '0x7fCA0CbB525917C6fC0548676BFFC02A7c1f508B',account,'name',[""]);
         }}
       >
         Perform tx
