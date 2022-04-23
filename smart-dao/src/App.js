@@ -14,6 +14,7 @@ import ActivitiesList from "./Pages/ActivitiesList.js";
 class App extends React.Component {
     render(){
         return(
+            <div>
             <Routes>
                 <Route exact path='/' element={<WelcomePage/>} />
                 <Route exact path='/option' element={<OptionPage/>} />
@@ -21,6 +22,7 @@ class App extends React.Component {
                 <Route exact path='/CreateDao' element={<CreateDAO/>} />
                 <Route exact path='/activities' element={<ActivitiesList/>} />
             </Routes>
+            </div>
         )
     
     }
