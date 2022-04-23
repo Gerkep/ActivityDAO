@@ -16,11 +16,11 @@ const CreateDAO = (props) => {
   const [transaction, setTransaction] = useState(null);
   useEffect(()=> {
       if(transaction){
-          //console.log("hash: ", transaction.hash);
-          //let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
-        //     navigate(`/daoDashboard/${data}`);
+        //   console.log("hash: ", transaction.hash);
+        //   let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
+        //     navigate(`/activity/${data}`);
         //   });
-        navigate(`/daoDashboard/${transaction}`);
+        navigate(`/activity/${transaction}`);
       }
       else{
           console.log("error");
