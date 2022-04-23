@@ -6,12 +6,12 @@
 }
 .checkin{
     width: 34vw;
-    height: 14vw;
+    height: 16vw;
     box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.391);
     border-radius: 30px;
     margin-top: 25vh;
     text-align: center;
-    padding: 4vw;
+    padding: 2vw 4vw 4vw 4vw;
 }
 .checkin-input{
     display: flex;
@@ -21,6 +21,7 @@
 }
 .checkin-header{
     font-size: 2vw;
+    margin-top: 2vw;
 }
 .address-input{
     margin-top: 5vw;
@@ -36,4 +37,9 @@
     height: 2vw;
     width: 2vw;
     border: 2px solid black;
+}
+.close-btn{
+    margin-left: 32vw;
+    text-decoration: none;
+    font-weight: 700;
 }
