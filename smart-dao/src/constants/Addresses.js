@@ -1,1 +1,5 @@
-export const VaultFactoryAddress = '0x30f38906eFa003244bE583e49E362f57130FA056';
+export const VaultFactoryAddress = {
+    80001 : '0x30f38906eFa003244bE583e49E362f57130FA056',
+    0xafcee83030b95 : '0xE84e84fC9F7c7B1453C4414Cc2eB437D8A89e1dE',
+}
+

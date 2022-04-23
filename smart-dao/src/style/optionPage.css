@@ -9,11 +9,12 @@
     font-size: 2.5vw;
     font-weight: 900;
     margin-top: 12vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 0 2vw 0 2vw
+    margin: 0 2vw 4vw 2vw;
+    /* margin-bottom: 10hv; */
   }
 
 .rowC{
@@ -21,4 +22,33 @@
     flex-direction:row;
     justify-content:center;
 
+}
+.mainContainer {
+  width: 100%;
+  height: 100%;;
+}
+.info {
+  align-items: center;
+  text-align: center;
+}
+.profilePic {
+  display:block;
+  margin:auto;
+  height: 200px;
+}
+.formContainer {
+  text-align: center;
+  align-items: center;
+}
+.registerButton {
+  text-align: center;
+  align-items: center;
+}
+.buttonContainer{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  text-align: center;
 }
