@@ -4,7 +4,7 @@ import VotingRow from "../components/VotingRow";
 
 
 import "../style/daoDashboard.css"
-const DaoDashboard = () => {
+const Activity = () => {
   const {id} = useParams();
 
   return (
@@ -23,5 +23,5 @@ const DaoDashboard = () => {
   </div>
   )
 }
-export default DaoDashboard;
+export default Activity;
 

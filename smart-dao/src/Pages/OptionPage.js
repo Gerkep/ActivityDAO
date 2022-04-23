@@ -22,7 +22,7 @@ function OptionPage() {
       
     return (
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-            <Link to="/activities" type="button" onClick={handleJoin} className='option-btn '>Join Activity</Link>
+            <Link to="/activities" type="button" onClick={handleJoin} className='option-btn'>Join Activity</Link>
             <Link to="/CreateDao" type="button" onClick={handleCreate} className='option-btn'>Create Activity</Link>      
         </div>
 
