@@ -8,12 +8,12 @@ class VotingRow extends React.Component {
         return(
             <div className="voting-row">
                 <div className="voting-about">
-                    <h2 className="voting-name">Voting name</h2>
-                    <p className="voting-description">dsagfjkha dsfa sjang weuhf waeuhris udsf buew uwi rawegfhpreagf iearg iraegiyar hwejkfaoe fbwf goy 4kfa</p>
+                    <h2 className="voting-name">{this.props.name}</h2>
+                    <p className="voting-description">{this.props.description}</p>
                 </div>
                 <div className="voting-interact">
                     <button className="approve-voting-btn">Approve</button>
-                    <p className="votes-counter">23/45</p>
+                    <p className="votes-counter">{this.props.votes}/{this.props.votesGoal}</p>
                 </div>
             </div>
         )
