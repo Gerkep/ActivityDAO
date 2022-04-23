@@ -1,0 +1,24 @@
+.connect-btn{
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 20vw;
+    height: 5vw;
+    border-radius: 30px;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 2vw 0 2vw
+  }
+
+.rowC{
+    display:flex; 
+    flex-direction:row;
+    justify-content:center;
+
+}

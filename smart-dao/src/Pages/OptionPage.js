@@ -1,5 +1,7 @@
 import React from 'react'
 import "../style/styles.css";
+import "../style/optionPage.css";
+
 import { useWeb3React } from '@web3-react/core';
 import {Link} from 'react-router-dom'
 
@@ -18,9 +20,9 @@ function OptionPage() {
       }
   
     return (
-        <div>
-            <Link to="/daoDashboard" type="button" onClick={handleJoin}>Join DAO</Link>
-            <Link to="/CreateDao" type="button" onClick={handleCreate} >Create DAO</Link>      
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+            <Link to="/daoDashboard" type="button" onClick={handleJoin} className='connect-btn button'>Join DAO</Link>
+            <Link to="/CreateDao" type="button" onClick={handleCreate} className='connect-btn button'>Create DAO</Link>      
         </div>
 
     );
