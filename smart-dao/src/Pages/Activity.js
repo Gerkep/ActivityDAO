@@ -18,7 +18,6 @@ const Activity = () => {
   }
   return (
     <div>
-      {id}
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
       <Link to="/proposeTimePlace" type="button" className='create-idea-btn'>Propose Time/Place</Link>
       <button className="checkin-btn" onClick={() => navigate(`/checkin/${id}`)}>Check in</button>
