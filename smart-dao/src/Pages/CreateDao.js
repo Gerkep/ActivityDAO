@@ -17,7 +17,7 @@ const CreateDAO = (props) => {
       if(transaction){
           console.log("hash: ", transaction.hash);
           let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
-            navigate(`/daoDashboard/${data}`);
+            navigate(`/activity/${data}`);
           });
       }
       else{
