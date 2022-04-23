@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js'
+import { BrowserRouter } from "react-router-dom";
 
 
 import { Web3ReactProvider } from "@web3-react/core"; //for ConnectWallet component
@@ -17,8 +18,7 @@ export default ReactDOM.render(
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </Web3ReactProvider>
-    , document.querySelector("#root")
+    </Web3ReactProvider>, document.querySelector("#root")
     
 )
 
