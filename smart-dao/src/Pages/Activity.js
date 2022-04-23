@@ -21,6 +21,7 @@ const Activity = () => {
       {id}
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
       <button className="create-idea-btn">Propose an idea</button>
+      <Link to="/checkin" className="checkin-btn">Check in</Link>
       <h1 className="page-name">Barcelona Soccer Team</h1>
       <div className="votings-container">
         {renderProposals()}

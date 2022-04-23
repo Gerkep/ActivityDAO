@@ -8,9 +8,32 @@
     font-size: 1.5vw;
 }
 .page-name{
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
     margin-top: 12vh;
+}
+.page-name-for-welc{
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 8vh;
+    font-weight: 400;
+}
+.checkin-btn{
+    position: absolute;
+    right: 20vw;
+    top: -2vw;
+    width: 15vw;
+    height: 4vw;
+    margin-top: 3vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .create-idea-btn{
     position: absolute;
@@ -34,6 +57,16 @@
     margin-top: 4vw;
     width: 100vw;
     height: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.votings-container-for-welc{
+    margin-top: 4vw;
+    width: 100vw;
+    height: 20vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

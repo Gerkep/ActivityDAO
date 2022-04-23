@@ -63,7 +63,7 @@ const CreateDAO = (props) => {
             setTransaction(tx);
             
         }}
-        className="connect-btn"
+        className="connect-btn-crAc"
         >
         Perform tx
         </button>

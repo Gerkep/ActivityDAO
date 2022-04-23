@@ -7,8 +7,9 @@ import WelcomePage from './Pages/WelcomePage.js'
 import Activity from './Pages/Activity.js'
 import OptionPage from './Pages/OptionPage'
 import CreateDAO from "./Pages/CreateDao.js";
+import Checkin from "./components/Checkin.js";
 
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import ActivitiesList from "./Pages/ActivitiesList.js";
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
                 <Route exact path='/' element={<WelcomePage/>} />
                 <Route exact path='/option' element={<OptionPage/>} />
                 <Route exact path='/activity/:id' element={<Activity/>} />
+                <Route path="/checkin" exact element={<Checkin/>} />
                 <Route exact path='/CreateDao' element={<CreateDAO/>} />
                 <Route exact path='/activities' element={<ActivitiesList/>} />
             </Routes>
