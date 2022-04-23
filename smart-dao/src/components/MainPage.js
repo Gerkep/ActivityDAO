@@ -23,20 +23,20 @@ const MainPage = (props) => {
       <ConnectWallet 
       setLibrary = {setLibrary}
       setAccount = {setAccount}/>
-      {
+      {/* {
           fields.map(item =>{
               return (
               <div><label>{item.name}</label>
               <div onChange={()=>{setNewDAOName()}}>asass</div></div> )
           })
-      }
-      <button
+      } */}
+      {/* <button
         onClick={async () => {
           await performTx(library,account, '0x7fCA0CbB525917C6fC0548676BFFC02A7c1f508B',account,'name',[""]);
         }}
       >
         Perform tx
-      </button>
+      </button> */}
     </div>
   );
 };
