@@ -1,0 +1,41 @@
+.centered {
+    height: 100vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 0 2vw 0 2vw
+
+}
+
+.act-name{
+    margin: 0 2vw 0 2vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.connect-btn{
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 10vw;
+    height: 2.5vw;
+    border-radius: 15px;
+    font-size: 1.5vw;
+    font-weight: 900;
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 2vw 0 2vw
+  }
+
+.header-name{
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 12vh;
+}
