@@ -1,3 +1,4 @@
+   
 import React from "react";
 import { Web3ReactProvider, useWeb3React } from "@web3-react/core";
 import ConnectWallet from './ConnectWallet.js'
@@ -13,7 +14,7 @@ class App extends React.Component {
         return(
             <Router>
                 <Routes>
-                    <Route exact path='/welcome' element={<WelcomePage/>} />
+                    <Route exact path='/' element={<WelcomePage/>} />
                     <Route exact path='/dao' element={<DaoDashboard/>} />
                 </Routes>
             </Router>
