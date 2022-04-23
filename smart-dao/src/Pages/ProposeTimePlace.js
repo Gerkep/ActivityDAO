@@ -3,6 +3,8 @@ import ConnectWallet from "../ConnectWallet";
 import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
 import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 
 
@@ -54,11 +56,13 @@ const ProposeTimePlace = (props) => {
   return (
 
     <div>
+        <Link to="/" className="main-page-link">MAIN PAGE</Link>
+
         
         <h1 className="header-name-pTP">Propose a Time and Place for Your Activity</h1>
         <div className="centered">
         
-                
+        
         <label className="act-name">Propose Place</label>
         <textarea className="item" onChange={e => setNewDAOName(e.target.value)} />    
         
