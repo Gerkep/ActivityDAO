@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/votingRow.css"
 
-class VotingRow extends React.Component {
+class ActivityRow extends React.Component {
 
 
     render(){
@@ -12,8 +12,7 @@ class VotingRow extends React.Component {
                     <p className="voting-description">{this.props.description}</p>
                 </div>
                 <div className="voting-interact">
-                    <button className="approve-voting-btn">Approve</button>
-                    <p className="votes-counter">{this.props.votes}/{this.props.votesGoal}</p>
+                    <button className="join-activity-btn">Join</button>
                 </div>
             </div>
         )
@@ -21,4 +20,4 @@ class VotingRow extends React.Component {
     }
 }
 
-export default VotingRow;
+export default ActivityRow;

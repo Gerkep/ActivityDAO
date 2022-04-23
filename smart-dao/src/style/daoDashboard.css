@@ -7,7 +7,7 @@
     color: black;
     font-size: 1.5vw;
 }
-.dao-name{
+.page-name{
     font-size: 5vw;
     text-align: center;
     margin-top: 12vh;
@@ -31,7 +31,7 @@
     flex-wrap: wrap;
 }
 .votings-container{
-    margin-top: 0vw;
+    margin-top: 4vw;
     width: 100vw;
     height: 40vw;
     display: flex;
