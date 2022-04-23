@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import VotingRow from "../components/VotingRow";
 
 
+import { Proposals
+ } from "../constants/SampleData";
 import "../style/daoDashboard.css"
 const DaoDashboard = () => {
   const {id} = useParams();

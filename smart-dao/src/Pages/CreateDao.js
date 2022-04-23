@@ -16,10 +16,11 @@ const CreateDAO = (props) => {
   const [transaction, setTransaction] = useState(null);
   useEffect(()=> {
       if(transaction){
-          console.log("hash: ", transaction.hash);
-          let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
-            navigate(`/daoDashboard/${data}`);
-          });
+          //console.log("hash: ", transaction.hash);
+          //let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
+        //     navigate(`/daoDashboard/${data}`);
+        //   });
+        navigate(`/daoDashboard/${transaction}`);
       }
       else{
           console.log("error");
@@ -57,8 +58,8 @@ const CreateDAO = (props) => {
         }
         <button
         onClick={async () => {
-            let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
-            //let tx = 1;  
+            //let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
+            let tx = 1;  
             console.log("TX: ", tx);
             setTransaction(tx);
             
