@@ -3,12 +3,12 @@ import { Contract } from '@ethersproject/contracts';
 import { AddressZero, MaxUint256 } from '@ethersproject/constants';
 import { BigNumber } from '@ethersproject/bignumber';
 import abi from '../constants/abis/VaultFactory.json';
+import { ethers } from 'ethers';
+import { hexStripZeros, TransactionDescription } from 'ethers/lib/utils';
 
 export const performTx = async (library, account, contractAddr, acccount, functionName, args) =>{
     console.log('DEBUGGING');
-    console.log(library, acccount);
-    console.log(functionName);
-    console.log(...args);
+    console.log(library, account, contractAddr, acccount, functionName, args);
     let value = undefined;
     let contract = getContract(contractAddr,abi,library, account)
 
@@ -16,7 +16,7 @@ export const performTx = async (library, account, contractAddr, acccount, functi
     let method = contract[functionName];
     console.log('testing here');
 
-    let result = await estimate(...args, value ? { value } : {}).then(estimatedGasLimit =>
+    let result = estimate(...args, value ? { value } : {}).then(estimatedGasLimit =>
         method(...args, {
           ...(value ? { value } : {}),
           gasLimit: calculateGasMargin(estimatedGasLimit),
@@ -26,7 +26,16 @@ export const performTx = async (library, account, contractAddr, acccount, functi
     console.log(result);
     return result;
 }
+export const withConfirmation = async (txpromise) => {
+  const result = await txpromise;
+  // await ethers.providers.waitForTransaction(
+  //   result.receipt ? result.receipt.transactionHash : result.hash,
+  //   3
+  // );
+  await result.wait();
+  return result;
 
+}
 export function getContract(address, ABI, library, account) {
     if (!isAddress(address) || address === AddressZero) {
       console.log('not working');

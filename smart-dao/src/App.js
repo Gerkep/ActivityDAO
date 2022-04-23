@@ -6,6 +6,7 @@ import { Web3ReactProvider, useWeb3React } from "@web3-react/core";
 import WelcomePage from './Pages/WelcomePage.js'
 import DaoDashboard from './Pages/DaoDashboard.js'
 import OptionPage from './Pages/OptionPage'
+import CreateDAO from "./Pages/CreateDao.js";
 
 import { Route, Routes, Link } from 'react-router-dom';
 
@@ -16,6 +17,8 @@ class App extends React.Component {
                 <Route exact path='/' element={<WelcomePage/>} />
                 <Route exact path='/option' element={<OptionPage/>} />
                 <Route exact path='/daoDashboard' element={<DaoDashboard/>} />
+                <Route exact path='/CreateDao' element={<CreateDAO/>} />
+
             </Routes>
         )
     
