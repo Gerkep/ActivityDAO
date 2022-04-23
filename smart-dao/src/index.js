@@ -17,8 +17,7 @@ export default ReactDOM.render(
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </Web3ReactProvider>
-    , document.querySelector("#root")
+    </Web3ReactProvider>, document.querySelector("#root")
     
 )
 

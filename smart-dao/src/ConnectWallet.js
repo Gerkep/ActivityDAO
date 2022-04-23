@@ -22,7 +22,7 @@ export default function ConnectWallet() {
   return (
     <div>
       <div className="connect">
-        <Link to="/dao" type="button" onClick={handleConnect} className="connect-btn">
+        <Link to="/daoDashboard" type="button" onClick={handleConnect} className="connect-btn">
           {active ? "Disconnect" : "Connect"}
         </Link>
       </div>
