@@ -64,12 +64,18 @@ export const Proposals = [
         deadline : 1650733871
     },
     {
-        id : '0x34gtb45g44gwrt45g5',
+        id : '0x43t55gy4gterhhgetgwrt',
         proposer : '0x1213212312312',
-        location : 'Madrid',
+        location : 'Paris',
         times : [
-            '11:00pm - 12pm',
-            '9:00am - 11:00am'
+            {
+                time:'10:00pm - 12pm',
+                votes: 6
+            },
+            {
+                time:'5:00am - 11:00am',
+                votes: 7
+            }
         ],
         deadline : 1650733871
     },
