@@ -5,19 +5,21 @@ import ConnectWallet from './ConnectWallet.js'
 
 import WelcomePage from './Pages/WelcomePage.js'
 import DaoDashboard from './Pages/DaoDashboard.js'
+import OptionPage from './Pages/OptionPage'
 
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { Router,Routes,Route } from 'react-router-dom';
 
 class App extends React.Component {
 
     render(){
         return(
-            <Router>
+           
                 <Routes>
                     <Route exact path='/' element={<WelcomePage/>} />
-                    <Route exact path='/dao' element={<DaoDashboard/>} />
+                    <Route exact path='/option' element={<OptionPage/>} />
+                    <Route exact path='/daoDashboard' element={<DaoDashboard/>} />
                 </Routes>
-            </Router>
+           
         )
     
     }
