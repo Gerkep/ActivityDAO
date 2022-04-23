@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ActivityRow from "../components/ActivityRow";
+import ActivityRowForWelcome from "../components/ActivityRowForWelcome";
 import { Activities } from "../constants/SampleActivities";
 
 import "../style/daoDashboard.css"
-const ActivitiesList = () => {
+const ActivitiesListforWelcome = (props) => {
 
 
   const generateActivitiesList = () => {
     return Activities.slice(0,3).map(activity => {
       return (
-          <ActivityRow key={activity.hash} name={activity.name} description={activity.description} hash={activity.hash}/>
+          <ActivityRowForWelcome key={activity.hash} name={activity.name} description={activity.description} hash={activity.hash} />
       )
   })
   }
@@ -26,5 +26,5 @@ const ActivitiesList = () => {
   </div>
   )
 }
-export default ActivitiesList;
+export default ActivitiesListforWelcome;
 

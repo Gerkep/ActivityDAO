@@ -20,7 +20,7 @@ const Activity = () => {
     <div>
       {id}
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
-      <Link to="/proposeTimePlace" type="button" className='create-idea-btn'>Propose Time/Place</Link>
+      <Link to="/proposeTimePlace1" type="button" className='create-idea-btn'>Propose Time/Place</Link>
       <Link to="/checkin" className="checkin-btn">Check in</Link>
       <h1 className="page-name">Barcelona Soccer Team</h1>
       <div className="votings-container">

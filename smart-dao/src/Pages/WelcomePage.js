@@ -9,7 +9,7 @@ const WelcomePage = () => {
   return (
       <div>
         <div className="welcome-header">Welcome to SmartDAO!</div>
-        <ActivityListforWelcome/>
+        {/* <ActivityListforWelcome/> */}
         <MainPage/>
     </div>
   )

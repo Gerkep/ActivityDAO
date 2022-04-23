@@ -15,22 +15,21 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
 
 import "../style/createActivity.css"
-import "../style/proposeTimePlace.css"
+import "../style/propTimePlace.css"
 import { publishToIPFS } from "../utils/core";
 
 
 const ProposeTimePlace = (props) => {
     const navigate = useNavigate();
-
-  const [newDAOName, setNewDAOName] = useState('');
+    const [newDAOName, setNewDAOName] = useState('');
     // const [value, setValue] = React.useState<Date | null>(new Date());
     const [value, setValue] = useState(new Date())
 
 
 
 
-  const [transaction, setTransaction] = useState(null);
-  useEffect(()=> {
+    const [transaction, setTransaction] = useState(null);
+    useEffect(()=> {
       if(transaction){
         //   console.log("hash: ", transaction.hash);
         //   let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
@@ -56,10 +55,19 @@ const ProposeTimePlace = (props) => {
   return (
 
     <div>
-        <Link to="/" className="main-page-link">MAIN PAGE</Link>
+        {/* <Link to="/" className="main-page-link">MAIN PAGE</Link> */}
 
+        <div className='checkin-page-PTT'>
+                <Link to="/" className="main-page-link">MAIN PAGE</Link>
+            <div className='checkin-PTT'>
+                <h1 className='checkin-header-PTT'>Propose a Time and Place for Your Activity</h1>
+                <div className='checkin-input-PTT'>
+                    <input placeholder='address' type="text" className='address-input-PTT'/>
+                </div>
+            </div>
+        </div>
         
-        <h1 className="header-name-pTP">Propose a Time and Place for Your Activity</h1>
+        {/* <h1 className="header-name-pTP">Propose a Time and Place for Your Activity</h1> */}
         <div className="centered">
         
         
@@ -81,7 +89,7 @@ const ProposeTimePlace = (props) => {
         </LocalizationProvider>
 
         
-        {/* <button
+        <button
         onClick={async () => {
             //let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
             let tx = 1;  
@@ -92,7 +100,7 @@ const ProposeTimePlace = (props) => {
         className="connect-btn-crAc"
         >
         Perform tx
-        </button> */}
+        </button>
         </div>
 
     </div>
