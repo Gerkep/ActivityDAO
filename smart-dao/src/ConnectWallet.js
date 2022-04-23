@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "./lib/connectors";
 import { isNoEthereumObject } from "./lib/errors";
-import history from "./history.js";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 export default function ConnectWallet() {
@@ -17,15 +17,14 @@ export default function ConnectWallet() {
         window.open("https://metamask.io/download.html");
       }
     });
-    history.push('/dao')
   };
 
   return (
     <div>
       <div className="connect">
-        <button type="button" onClick={handleConnect} className="connect-btn">
+        <Link to="/dao" type="button" onClick={handleConnect} className="connect-btn">
           {active ? "Disconnect" : "Connect"}
-        </button>
+        </Link>
       </div>
     </div>
   );
