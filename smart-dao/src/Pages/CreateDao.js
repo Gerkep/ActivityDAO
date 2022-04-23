@@ -9,7 +9,7 @@ import { publishToIPFS } from "../utils/core";
 
 
 const CreateDAO = (props) => {
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
   const [newDAOName, setNewDAOName] = useState('');
   const [transaction, setTransaction] = useState(null);
@@ -19,6 +19,7 @@ const CreateDAO = (props) => {
           let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
             navigate(`/activity/${data}`);
           });
+        // navigate(`/activity/${transaction}`);
       }
       else{
           console.log("error");
@@ -57,12 +58,12 @@ const CreateDAO = (props) => {
         <button
         onClick={async () => {
             let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
-            //let tx = 1;  
+            // let tx = 1;  
             console.log("TX: ", tx);
             setTransaction(tx);
             
         }}
-        className="connect-btn"
+        className="connect-btn-crAc"
         >
         Perform tx
         </button>
