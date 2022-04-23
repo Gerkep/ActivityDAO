@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js'
+import { BrowserRouter } from "react-router-dom";
+
 
 import { Web3ReactProvider } from "@web3-react/core"; //for ConnectWallet component
 import { Web3Provider } from "@ethersproject/providers"; //for ConnectWallet component
@@ -12,8 +14,10 @@ function getLibrary(provider) { ////for ConnectWallet component
 
 export default ReactDOM.render(
     <Web3ReactProvider getLibrary={getLibrary}>
-        <App />
-    </Web3ReactProvider>
-    , document.querySelector("#root")
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Web3ReactProvider>, document.querySelector("#root")
     
 )
+

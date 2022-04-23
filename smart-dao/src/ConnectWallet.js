@@ -2,7 +2,7 @@ import { useWeb3React } from "@web3-react/core";
 import { useEffect } from "react";
 import { injected } from "./lib/connectors";
 import { isNoEthereumObject } from "./lib/errors";
-
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const ConnectWallet = (props) => {
@@ -22,21 +22,18 @@ const ConnectWallet = (props) => {
       return;
     }
     activate(injected, (error) => {
-      if (isNoEthereumObject(error))
+      if (isNoEthereumObject(error)){
         window.open("https://metamask.io/download.html");
+      }
     });
   };
 
   return (
     <div>
-      <div className="user">
-        <p>Account: {account}</p>
-        <p>ChainId: {chainId}</p>
-      </div>
       <div className="connect">
-        <button type="button" onClick={handleConnect}>
-          {active ? "disconnect" : "connect"}
-        </button>
+        <Link to="/option" type="button" onClick={handleConnect} className="connect-btn">
+          {active ? "Disconnect" : "Connect"}
+        </Link>
       </div>
     </div>
   );
