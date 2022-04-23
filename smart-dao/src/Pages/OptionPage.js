@@ -19,10 +19,11 @@ function OptionPage() {
         console.log('You clicked create.');
       }
   
+      
     return (
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-            <Link to="/daoDashboard" type="button" onClick={handleJoin} className='connect-btn button'>Join DAO</Link>
-            <Link to="/CreateDao" type="button" onClick={handleCreate} className='connect-btn button'>Create DAO</Link>      
+            <Link to="/activities" type="button" onClick={handleJoin} className='connect-btn button'>Join Activity</Link>
+            <Link to="/CreateDao" type="button" onClick={handleCreate} className='connect-btn button'>Create Activity</Link>      
         </div>
 
     );
