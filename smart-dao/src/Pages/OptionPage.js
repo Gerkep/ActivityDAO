@@ -19,8 +19,8 @@ function OptionPage() {
   
     return (
         <div>
-            <Link to="/daoDashboard" type="button" onClick={handleJoin}>Join DAO</Link>
-            <Link to="/CreateDao" type="button" onClick={handleCreate} >Create DAO</Link>      
+            <Link to="/activities" type="button" onClick={handleJoin}>Join Activity</Link>
+            <Link to="/CreateDao" type="button" onClick={handleCreate} >Create Activity</Link>      
         </div>
 
     );
