@@ -20,7 +20,7 @@
 }
 .checkin-btn{
     position: absolute;
-    right: 20vw;
+    right: 24vw;
     top: -2vw;
     width: 15vw;
     height: 4vw;
@@ -51,6 +51,7 @@
     justify-content:center;
     align-items:center;
     text-decoration: none;
+    padding: 0 2vw 0 2vw;
 }
 .dashboard-voting-container{
     width: 100vw;

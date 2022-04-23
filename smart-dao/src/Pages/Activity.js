@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import VotingRow from "../components/VotingRow";
-
+import { useNavigate } from 'react-router-dom';
 
 import "../style/daoDashboard.css"
 import { Proposals} from "../constants/SampleData";
 const Activity = () => {
   const {id} = useParams();
+  const navigate = useNavigate();
 
   const renderProposals = () => {
     return Proposals.map(item => {
@@ -15,13 +16,16 @@ const Activity = () => {
       )
     })
   }
-  
   return (
     <div>
-      {id}
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
+<<<<<<< HEAD
       <Link to="/proposeTimePlace1" type="button" className='create-idea-btn'>Propose Time/Place</Link>
       <Link to="/checkin" className="checkin-btn">Check in</Link>
+=======
+      <Link to="/proposeTimePlace" type="button" className='create-idea-btn'>Propose Time/Place</Link>
+      <button className="checkin-btn" onClick={() => navigate(`/checkin/${id}`)}>Check in</button>
+>>>>>>> bb30832b4a124df824aa76c5419d62bd52290604
       <h1 className="page-name">Barcelona Soccer Team</h1>
       <div className="votings-container">
         {renderProposals()}

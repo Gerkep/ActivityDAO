@@ -21,7 +21,7 @@ class App extends React.Component {
                 <Route exact path='/' element={<WelcomePage/>} />
                 <Route exact path='/option' element={<OptionPage/>} />
                 <Route exact path='/activity/:id' element={<Activity/>} />
-                <Route path="/checkin" exact element={<Checkin/>} />
+                <Route path="/checkin/:id" element={<Checkin/>} />
                 <Route exact path='/CreateDao' element={<CreateDAO/>} />
                 <Route exact path='/activities' element={<ActivitiesList/>} />
                 <Route exact path='/proposeTimePlace1' element={<ProposeTimePlace1/>} />
