@@ -1,11 +1,20 @@
 import { useWeb3React } from "@web3-react/core";
+import { useEffect } from "react";
 import { injected } from "./lib/connectors";
 import { isNoEthereumObject } from "./lib/errors";
 
 import "./styles.css";
 
-export default function ConnectWallet() {
-  const { chainId, account, active, activate, deactivate } = useWeb3React();
+const ConnectWallet = (props) => {
+  const { chainId, library, account, active, activate, deactivate } = useWeb3React();
+  const {setLibrary, setAccount} = props;
+
+  useEffect(()=>{
+    setAccount(account);
+  },[account])
+  useEffect(()=>{
+    setLibrary(library)
+  },[library])
 
   const handleConnect = () => {
     if (active) {
@@ -32,3 +41,5 @@ export default function ConnectWallet() {
     </div>
   );
 }
+
+export default ConnectWallet;
