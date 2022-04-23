@@ -12,7 +12,7 @@
   
   .voting-about { grid-area: voting-about; }
   
-  .voting-interact { grid-area: voting-interact; display: flex; align-items: center;}
+  .voting-interact { grid-area: voting-interact; display: flex; align-items: center; flex-wrap:wrap}
 .voting-name{
     margin-bottom: 1vw;
     font-size: 2vw;
@@ -28,6 +28,10 @@
     border-radius: 30px;
     border: none;
     font-size: 1vw;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content:center;
 }
 .votes-counter{
     margin-left: 4vw;
@@ -43,5 +47,14 @@
     border-radius: 30px;
     border: none;
     font-size: 1vw;
+}
+
+.time-Row{
+    flex-direction: row;
+}
+
+.voting-box{
+    width:100%;
+    display:flex;
 }
   

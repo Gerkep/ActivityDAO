@@ -4,8 +4,14 @@ export const Proposals = [
         proposer : '0x1213212312312',
         location : 'Malaysia',
         times : [
-            '11:00pm - 12pm',
-            '9:00am - 11:00am'
+            {
+                time:'11:00pm - 12pm',
+                votes: 4
+            },
+            {
+                time:'9:00am - 11:00am',
+                votes: 2
+            }
         ],
         deadline : 1650733871
     },
@@ -14,8 +20,14 @@ export const Proposals = [
         proposer : '0x1213212312312',
         location : 'Amsterdam',
         times : [
-            '11:00pm - 12pm',
-            '9:00am - 11:00am'
+            {
+                time:'8:00pm - 12pm',
+                votes: 4
+            },
+            {
+                time:'4:00am - 11:00am',
+                votes: 9
+            }
         ],
         deadline : 1650733871
     },
@@ -24,8 +36,14 @@ export const Proposals = [
         proposer : '0x1213212312312',
         location : 'Madrid',
         times : [
-            '11:00pm - 12pm',
-            '9:00am - 11:00am'
+            {
+                time:'7:00pm - 12pm',
+                votes: 4
+            },
+            {
+                time:'9:00am - 11:00am',
+                votes: 5
+            }
         ],
         deadline : 1650733871
     },
@@ -34,8 +52,14 @@ export const Proposals = [
         proposer : '0x1213212312312',
         location : 'Paris',
         times : [
-            '11:00pm - 12pm',
-            '9:00am - 11:00am'
+            {
+                time:'10:00pm - 12pm',
+                votes: 6
+            },
+            {
+                time:'5:00am - 11:00am',
+                votes: 7
+            }
         ],
         deadline : 1650733871
     },

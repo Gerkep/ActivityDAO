@@ -5,8 +5,9 @@ import VotingRow from "../components/VotingRow";
 
 import { Proposals
  } from "../constants/SampleData";
-import "../style/daoDashboard.css"
-const DaoDashboard = () => {
+import "../style/daoDashboard.css";
+
+const Activity = () => {
   const {id} = useParams();
 
   return (
@@ -16,14 +17,21 @@ const DaoDashboard = () => {
       <button className="create-idea-btn">Propose an idea</button>
       <h1 className="page-name">Barcelona Soccer Team</h1>
       <div className="votings-container">
-          <VotingRow name="Match Sunday at 5PM?" description="regreg eger5g4 45g 4etwhgwtrhgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={13} votesGoal={21}/>
+        {
+          Proposals.map(item => {
+            return(
+              <VotingRow location={item.location} proposer={item.proposer} timeOptions={item.times} remainingTime={item.deadline}> </VotingRow>
+            )
+          })
+        }
+          {/* <VotingRow name="Match Sunday at 5PM?" description="regreg eger5g4 45g 4etwhgwtrhgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={13} votesGoal={21}/>
           <VotingRow name="Basketball tomorrow?" description="regrehgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={3} votesGoal={11}/>
           <VotingRow name="Basketball tomorrow?" description="regrehgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={3} votesGoal={11}/>
           <VotingRow name="Basketball tomorrow?" description="regrehgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={3} votesGoal={11}/>
-          <VotingRow name="Basketball tomorrow?" description="regrehgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={3} votesGoal={11}/>
+          <VotingRow name="Basketball tomorrow?" description="regrehgsf hgfdh gnsfbdg rsthsryn s sdfg snhyrtsh sfg" votes={3} votesGoal={11}/> */}
       </div>
   </div>
   )
 }
-export default DaoDashboard;
+export default Activity;
 
