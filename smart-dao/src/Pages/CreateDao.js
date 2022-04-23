@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ConnectWallet from "../ConnectWallet";
-import { performTx, withConfirmation } from "../utils/core";
+import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
 import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,14 +14,9 @@ const CreateDAO = (props) => {
   useEffect(()=> {
       if(transaction){
           console.log("hash: ", transaction.hash);
-          //redirect to dashboard and pass parameter which is transaction hash
-          //which is transaction.hash
-          //set transaction to null
-          //programmatically reedirect user to a url
-          //{transactionHash : transaction.hash} 
-
-          
-          navigate(`/daoDashboard/${transaction.hash}`);
+          let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
+            navigate(`/daoDashboard/${data}`);
+          });
       }
       else{
           console.log("error");

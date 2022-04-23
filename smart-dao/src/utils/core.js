@@ -72,3 +72,9 @@ export function isAddress(value) {
   export function getSigner(library, account) {
     return library.getSigner(account).connectUnchecked();
   }
+
+  export async function getComunnityFromTx(txHash,library) {
+      const receipt = await library.getTransactionReceipt(txHash);
+      console.log(receipt);
+      return `0x${receipt.logs[0].data.substring(26,66)}`;
+  }
