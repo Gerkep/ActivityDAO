@@ -5,8 +5,7 @@ import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 
 import "../style/createActivity.css"
- 
-
+import { publishToIPFS } from "../utils/core";
 
 
 const CreateDAO = (props) => {

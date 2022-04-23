@@ -3,10 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import VotingRow from "../components/VotingRow";
 
 
+import "../style/daoDashboard.css"
 import { Proposals
- } from "../constants/SampleData";
-import "../style/daoDashboard.css";
-
+} from "../constants/SampleData";
 const Activity = () => {
   const {id} = useParams();
 

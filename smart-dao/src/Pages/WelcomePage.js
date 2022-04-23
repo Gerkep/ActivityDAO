@@ -5,10 +5,8 @@ import MainPage from '../components/MainPage.js'
 const WelcomePage = () => {
   return (
       <div>
-
         <div className="welcome-header">Welcome to SmartDAO</div>
         <MainPage/>
-
     </div>
   )
 }

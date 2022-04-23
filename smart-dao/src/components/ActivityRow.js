@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/votingRow.css"
-
+import { Link } from "react-router-dom";
 class ActivityRow extends React.Component {
 
 
@@ -12,7 +12,7 @@ class ActivityRow extends React.Component {
                     <p className="voting-description">{this.props.description}</p>
                 </div>
                 <div className="voting-interact">
-                    <button className="join-activity-btn">Join</button>
+                    <Link to={`/activity/${this.props.hash}`} className="join-activity-btn">Join</Link>
                 </div>
             </div>
         )
