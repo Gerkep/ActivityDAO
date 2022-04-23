@@ -1,18 +1,13 @@
 .voting-row{
-    width: 50vw;
-    border: solid 3px black;
+    width: 20vw;
+    height: 14vw;
     border-radius: 30px;
-    margin: 3vw 0 0vw 0vw;
+    margin: 0vw 3vw 0vw 3vw;
     display: flex;
     padding: 1.5vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "voting-about voting-interact";
-      overflow: hidden;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-shadow: 3px 10px 30px rgba(0, 0, 0, 0.377);
 }
   
   .voting-about { grid-area: voting-about; }
@@ -20,11 +15,14 @@
   .voting-interact { grid-area: voting-interact; display: flex; align-items: center;}
 .voting-name{
     margin-bottom: 1vw;
+    font-size: 2vw;
+}
+.voting-description{
+    font-size: 1vw;
 }
 .approve-voting-btn{
     width: 10vw;
-    height: 4vw;
-    margin-left: 4vw;
+    height: 2.5vw;
     background-color: black;
     color: white;
     border-radius: 30px;
@@ -32,7 +30,18 @@
     font-size: 1vw;
 }
 .votes-counter{
-    margin-left: 5vw;
+    margin-left: 4vw;
     font-size: 1.5vw;
+}
+.join-activity-btn{
+    font-family: 'Montserrat', sans-serif;
+    width: 10vw;
+    height: 2.5vw;
+    margin-left: 8vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1vw;
 }
   
