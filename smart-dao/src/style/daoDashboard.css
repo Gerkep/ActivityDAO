@@ -1,0 +1,43 @@
+.main-page-link{
+    text-decoration: none;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    font-weight: 500;
+    color: black;
+    font-size: 1.5vw;
+}
+.dao-name{
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 12vh;
+}
+.create-idea-btn{
+    position: absolute;
+    right: 2vw;
+    top: -2vw;
+    width: 15vw;
+    height: 4vw;
+    margin-top: 3vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+}
+.dashboard-voting-container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.votings-container{
+    margin-top: 0vw;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+  

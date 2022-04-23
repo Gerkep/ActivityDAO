@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { injected } from "./lib/connectors";
 import { isNoEthereumObject } from "./lib/errors";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "./style/styles.css";
 
 const ConnectWallet = (props) => {
   const { chainId, library, account, active, activate, deactivate } = useWeb3React();
@@ -31,7 +31,7 @@ const ConnectWallet = (props) => {
   return (
     <div>
       <div className="connect">
-        <Link to="/option" type="button" onClick={handleConnect} className="connect-btn">
+        <Link to="/option" type="button" onClick={handleConnect} className="connect-btn button">
           {active ? "Disconnect" : "Connect"}
         </Link>
       </div>
