@@ -3,6 +3,7 @@ import { Contract } from '@ethersproject/contracts';
 import { AddressZero, MaxUint256 } from '@ethersproject/constants';
 import { BigNumber } from '@ethersproject/bignumber';
 import abi from '../constants/abis/VaultFactory.json';
+import { NFTStorage , Bob } from 'nft.storage';
 import { ethers } from 'ethers';
 import { hexStripZeros, TransactionDescription } from 'ethers/lib/utils';
 
@@ -77,4 +78,13 @@ export function isAddress(value) {
       const receipt = await library.getTransactionReceipt(txHash);
       console.log(receipt);
       return `0x${receipt.logs[0].data.substring(26,66)}`;
+  }
+
+  export async function publishToIPFS(metadata) {
+    const ipfs = new  NFTStorage({token : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDkxREVEZjVCMmI3REU3NDA1RjM4YjkwMjNhYzAxNTdFMTU3MGE1NjkiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1MDcyMTAwODQyMiwibmFtZSI6ImFtc3RlcmRhbSJ9.Sn1JCXO3xWD5tLdsCsWVRzbNyJFE1fOSQjTYzaKfEPU'});
+    const someData = new Blob([metadata]);
+    console.log(someData);
+    const cid = await ipfs.storeBlob(someData);
+    console.log(cid);
+    return cid;
   }
