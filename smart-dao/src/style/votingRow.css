@@ -1,0 +1,38 @@
+.voting-row{
+    width: 50vw;
+    border: solid 3px black;
+    border-radius: 30px;
+    margin: 3vw 0 0vw 0vw;
+    display: flex;
+    padding: 1.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "voting-about voting-interact";
+      overflow: hidden;
+}
+  
+  .voting-about { grid-area: voting-about; }
+  
+  .voting-interact { grid-area: voting-interact; display: flex; align-items: center;}
+.voting-name{
+    margin-bottom: 1vw;
+}
+.approve-voting-btn{
+    width: 10vw;
+    height: 4vw;
+    margin-left: 4vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1vw;
+}
+.votes-counter{
+    margin-left: 5vw;
+    font-size: 1.5vw;
+}
+  

@@ -17,6 +17,7 @@ const CreateDAO = (props) => {
           //which is transaction.hash
           //set transaction to null
           //programmatically reedirect user to a url
+          //{transactionHash : transaction.hash} 
           navigate('/daoDashboard');
       }
       else{

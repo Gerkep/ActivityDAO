@@ -1,21 +1,32 @@
 import React from "react";
-import { ethers } from "ethers";
+import { Link } from "react-router-dom";
+import VotingRow from "../components/VotingRow";
+
+import "../style/daoDashboard.css"
 class DaoDashboard extends React.Component {
-  componentDidMount(){
-    this.connectCantract();
-  }
 
   async connectCantract () {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send("eth_requestAccounts", []);
-    const signer = provider.getSigner()
-    // const contract = new ethers.Contract("0x79cF3c6F91123c72b986921030F429CA8c8ac437", abi, provider);
+  //   var myContract = new web3.eth.Contract([...], '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe', {
+  //     from: '0x1234567890123456789012345678901234567891', // default from address
+  //     gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+  // });
   }
+  renderVotings(){
+
+}
 
     render(){
         return(
             <div>
-                DAODashboard
+                <Link to="/" className="main-page-link">MAIN PAGE</Link>
+                <button className="create-idea-btn">Propose an idea</button>
+                <h1 className="dao-name">Barcelona Soccer Team</h1>
+                <div className="votings-container">
+                    <VotingRow />
+                    <VotingRow />
+                    <VotingRow />
+                    <VotingRow />
+                </div>
             </div>
         )
     
