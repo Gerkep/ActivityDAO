@@ -24,6 +24,7 @@ const ProposeTimePlace1 = () => {
     const [value2, setValue2] = useState(new Date());
     const [value3, setValue3] = useState(new Date());
 
+
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     // await provider.send("eth_requestAccounts", []);
 
@@ -53,6 +54,7 @@ const ProposeTimePlace1 = () => {
     console.log("MetaMask Info",account, library);
   
     console.log("Cur Name: ",newDAOName);
+
   
     console.log("Datetime1: ", Math.floor(value1.getTime() / 1000));
     console.log("Datetime2: ", Math.floor(value2.getTime() / 1000));
@@ -107,7 +109,8 @@ const ProposeTimePlace1 = () => {
 
                 <button
                     onClick={async () => {
-                        let tx = await withConfirmation(performTx(library,account, id,account,'deployActivity',[newDAOName,parseInt(minNumParticipants),1000000,OurToken[chainId],60]));
+                        let valArr = [Math.floor(value1.getTime() / 1000),Math.floor(value2.getTime() / 1000),Math.floor(value3.getTime() / 1000)]
+                        let tx = await withConfirmation(performTx(library,account, id,account,'proposeLocation',[newDAOName,valArr]));
                         //let tx = 1;  
                         console.log("TX: ", tx);
                         setTransaction(tx);
