@@ -39,11 +39,11 @@ const ProposeTimePlace1 = () => {
 
     useEffect(()=> {
         if(transaction){
-          //   console.log("hash: ", transaction.hash);
-          //   let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
-          //     navigate(`/activity/${data}`);
-          //   });
-          navigate(`/activity/${transaction}`);
+            //console.log("hash: ", transaction.hash);
+            // let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
+            //   navigate(`/activity/${data}`);
+            // });
+          navigate(`/activity/${id}`);
         }
         else{
             console.log("error");
@@ -109,8 +109,8 @@ const ProposeTimePlace1 = () => {
 
                 <button
                     onClick={async () => {
-                        let valArr = [Math.floor(value1.getTime() / 1000),Math.floor(value2.getTime() / 1000),Math.floor(value3.getTime() / 1000)]
-                        let tx = await withConfirmation(performTx(library,account, id,account,'proposeLocation',[newDAOName,valArr]));
+                        let valArr = [[Math.floor(value1.getTime() / 1000)],[Math.floor(value2.getTime() / 1000)],[Math.floor(value3.getTime() / 1000)]]
+                        let tx = await withConfirmation(performTx(library,ACTIVITY_ABI,account, id,account,'proposeLocation',[newDAOName,valArr]));
                         //let tx = 1;  
                         console.log("TX: ", tx);
                         setTransaction(tx);
