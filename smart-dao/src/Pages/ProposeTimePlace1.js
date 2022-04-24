@@ -13,6 +13,8 @@ import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 import "../style/createActivity.css"
 
+import ACTIVITY_ABI from "../constants/abis/Activity.json";
+import { ethers } from 'ethers';
 
 
 
@@ -22,6 +24,10 @@ const ProposeTimePlace1 = () => {
     const [value2, setValue2] = useState(new Date());
     const [value3, setValue3] = useState(new Date());
 
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // await provider.send("eth_requestAccounts", []);
+
+    
     const [transaction, setTransaction] = useState(null);
 
     const navigate = useNavigate();
