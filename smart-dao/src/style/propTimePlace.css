@@ -6,10 +6,10 @@
 }
 .checkin-PTT{
     width: 34vw;
-    height: 14vw;
+    height: 35vw;
     box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.391);
     border-radius: 30px;
-    margin-top: 25vh;
+    margin-top: 12vh;
     text-align: center;
     padding: 4vw;
     flex-direction: column;
@@ -19,8 +19,13 @@
     
 }
 .ta-PTT{
-    width: 136px;
-    height: 37px;
+    width: 18vw;
+    position: absolute;
+    background-color: transparent;
+    border: solid 2px black;
+    color: black;
+    border-radius: 30px;
+    padding: 0.8vw 0vw 0vw 0.8vw;
 }
 .checkin-input-PTT{
     display: flex;
@@ -29,7 +34,7 @@
     align-items: center;
 }
 .checkin-header-PTT{
-    font-size: 1.4vw;
+    font-size: 2vw;
     margin-bottom: 2vw;
 }
 .address-input-PTT{
@@ -59,26 +64,29 @@
 .label-PTT{
     padding-right: 30px;
     font-size: 1.5vw;
-
+    margin-left: -12vw;
     font-family: 'Montserrat', sans-serif;
 
 }
-
+.PTT2{
+    margin-left: -18.5vw;
+}
 
 .connect-btn-PTT{
     font-family: 'Montserrat', sans-serif;
     background-color: black;
     color: white;
     border: none;
-    width: 10vw;
-    height: 2.5vw;
+    width: 20vw;
+    height: 5vw;
     border-radius: 15px;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 900;
     margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 0 2vw 0 2vw
+    margin: 0 2vw 0 6vw;
+    padding: 1vw 0 1vw 0;
   }

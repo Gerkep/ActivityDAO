@@ -25,10 +25,10 @@
     width: 15vw;
     height: 4vw;
     margin-top: 3vw;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border-radius: 30px;
-    border: none;
+    border: solid 2px black;
     font-size: 1.5vw;
     display: flex;
     justify-content: center;
@@ -42,10 +42,10 @@
     width: 15vw;
     height: 4vw;
     margin-top: 3vw;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border-radius: 30px;
-    border: none;
+    border: solid black 2px;
     font-size: 1.5vw;
     display :flex;
     justify-content:center;
@@ -59,17 +59,18 @@
     flex-wrap: wrap;
 }
 .votings-container{
-    margin-top: 4vw;
+    margin-top: 3vw;
     width: 100vw;
     height: 40vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: scroll;
+    padding-bottom: 2vw;
 }
 
 .votings-container-for-welc{
-    margin-top: 4vw;
+    margin-top: 3vw;
     width: 100vw;
     height: 20vw;
     display: flex;
@@ -84,10 +85,10 @@
     width: 15vw;
     height: 4vw;
     margin-top: 3vw;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border-radius: 30px;
-    border: none;
+    border: solid black 2px;
     font-size: 1.5vw;
     display :flex;
     justify-content:center;
@@ -102,10 +103,10 @@
     width: 18vw;
     height: 4vw;
     margin-top: 3vw;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border-radius: 30px;
-    border: none;
+    border: solid black 2px;
     font-size: 1.5vw;
     display :flex;
     justify-content:center;
@@ -121,10 +122,10 @@
     width: 15vw;
     height: 4vw;
     margin-top: 3vw;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border-radius: 30px;
-    border: none;
+    border: solid black 2px;
     font-size: 1.5vw;
     display :flex;
     justify-content:center;

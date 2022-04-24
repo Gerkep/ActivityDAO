@@ -8,7 +8,7 @@ import ActivityListforWelcome from '../components/ActivityListforWelcome.js'
 const WelcomePage = () => {
   return (
       <div>
-        <div className="welcome-header">Welcome to SmartDAO!</div>
+        <div className="welcome-header">WELCOME!</div>
         {/* <ActivityListforWelcome/> */}
         <MainPage/>
     </div>

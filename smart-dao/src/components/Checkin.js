@@ -52,19 +52,20 @@ const Checkin = () => {
                 <div className='addresses-list'>
                     {generateAddresses()}
                 </div>
-                <button className='stake-claim-btn'>Check-in</button>
-                <button className='stake-claim-btn'
-                
-                onClick={async () => {
+                <div className='checkin-btns'>
+                    <button className='stake-claim-btn'>Check-in</button>
+                    <button className='stake-claim-btn'                
+                    onClick={async () => {
                     let tx = await withConfirmation(performTx(library,ACTIVITY_ABI,account, id,account,'claimStake',[]));
                     //let tx = 1;  
                     console.log("TX: ", tx);
                     setTransactionClaimStake(tx);
                   }}
-                
-                
-                
+
                 >Claim staking</button>
+                </div>
+                
+
 
                 </div>
             </div>

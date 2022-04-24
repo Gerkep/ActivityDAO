@@ -56,7 +56,7 @@ function OptionPage() {
                 await editUserInfo(library, account, chainId, newUserName, imageToUpload);
               }}
             className="registerButton">
-              register
+              Register
             </button>
           </div>
         </div>

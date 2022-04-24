@@ -12,6 +12,7 @@ import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
 import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 import "../style/createActivity.css"
+import "../style/proposeTimePlace.css"
 import { ethers } from 'ethers';
 import ACTIVITY_ABI from "../constants/abis/Activity.json";
 
@@ -71,12 +72,13 @@ const ProposeTimePlace1 = () => {
             <div className='checkin-PTT'>
                 <h1 className='checkin-header-PTT'>Propose a Time and Place for Your Activity</h1>
                 <div className='row-PTT'>
-                    <label className = 'label-PTT'>Propose Place</label>
+                    <label className = 'label-PTT PTT2'>Propose Place</label>
                     <textarea className="ta-PTT" onChange={e => setNewDAOName(e.target.value)} /> 
                 </div>
                 <div className='row-PTT'>
                     <label className = 'label-PTT' >Propose Date and Time</label>
-                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                    <div className='date-array'>
+                    <LocalizationProvider dateAdapter={AdapterDateFns} className="date-container">
                             <DateTimePicker
                             renderInput={(props) => <TextField {...props} />}
                             label="DateTimePicker"
@@ -86,7 +88,7 @@ const ProposeTimePlace1 = () => {
                             }}
                             />
                         </LocalizationProvider>
-                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                        <LocalizationProvider dateAdapter={AdapterDateFns} className="date-container">
                             <DateTimePicker
                             renderInput={(props) => <TextField {...props} />}
                             label="DateTimePicker"
@@ -96,7 +98,7 @@ const ProposeTimePlace1 = () => {
                             }}
                             />
                         </LocalizationProvider>
-                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                        <LocalizationProvider dateAdapter={AdapterDateFns} className="date-container">
                             <DateTimePicker
                             renderInput={(props) => <TextField {...props} />}
                             label="DateTimePicker"
@@ -106,6 +108,8 @@ const ProposeTimePlace1 = () => {
                             }}
                             />
                         </LocalizationProvider>
+                    </div>
+                        
                 </div>  
                 
 
