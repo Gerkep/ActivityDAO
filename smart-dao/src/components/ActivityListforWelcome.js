@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Link } from "react-router-dom";
 import ActivityRowForWelcome from "../components/ActivityRowForWelcome";
 import { Activities } from "../constants/SampleActivities";
@@ -9,18 +9,30 @@ import { getTopActivities } from "../utils/core";
 const ActivitiesListforWelcome = (props) => {
 
   const {library, account, chainId} = useWeb3React();
-  // const [myList, setMyList] = useState([]);
-
+  const [myList, setMyList] = useState([]);
   // getTopActivities(library,chainId,10).then((data)=>{
   //   setMyList(data)
   // });
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      getTopActivities(library,chainId,3).then((list)=>{
+        setMyList(list);
+      });
+    }, 10000);
+  
+    return () => clearInterval(intervalId);
+  }, []);
+
   const generateActivitiesList = () => {
-    return Activities.slice(0,3).map(activity => {
-      return (
-          <ActivityRowForWelcome key={activity.hash} name={activity.name} description={activity.description} hash={activity.hash} />
-      )
-  })
+    if(myList) {
+      return myList.map(activity => {
+        return (
+            <ActivityRowForWelcome key={activity.hash} name={activity.name} description={activity.deadline} hash={activity.hash} />
+        )
+    })
+    }
+    
   }
 
 

@@ -9,6 +9,7 @@ class ActivityRow extends React.Component {
             <div className="voting-row">
                 <div className="voting-about">
                     <h2 className="voting-name">{this.props.name}</h2>
+                    <p className="voting-description">DEADLINE </p>
                     <p className="voting-description">{this.props.description}</p>
                 </div>
                 <div className="voting-interact">
