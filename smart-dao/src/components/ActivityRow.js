@@ -13,7 +13,7 @@ class ActivityRow extends React.Component {
                     <p className="voting-description">{this.props.description}</p>
                 </div>
                 <div className="voting-interact">
-                    <Link to={`/activity/${this.props.hash}`} className="join-activity-btn">Join</Link>
+                    <Link to={`/activity/${this.props.hash}`} className="join-activity-btn">View Dashboard</Link>
                 </div>
             </div>
         )

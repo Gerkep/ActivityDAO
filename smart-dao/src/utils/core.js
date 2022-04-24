@@ -18,6 +18,7 @@ import { Buffer } from "buffer";
 
 export const performTx = async (
   library,
+  abi,
   account,
   contractAddr,
   acccount,

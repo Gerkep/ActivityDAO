@@ -33,9 +33,9 @@ function OptionPage() {
     <div className="mainContainer">
       {userProfile && userProfile.name ? (
         <div className="infoBox">
-          <div className="page-name-opt1">Welcome Back {userProfile.name} </div>
+          <div className="page-name-opt1">Welcome Back {userProfile.name}!</div>
           <img className="profilePic" src={userProfile.url}></img>
-          <div className="name">{userProfile.name}</div>
+
         </div>
       ) : (
         <div className="infoBox">
@@ -50,12 +50,12 @@ function OptionPage() {
   
           <input className="file-opt" type="file" name="myImage" onChange={(e)=>{setImageToUpload(e.target.files[0])}} />
 
-          <div className="registerButton">
+          <div>
             <button
               onClick={async () => {
                 await editUserInfo(library, account, chainId, newUserName, imageToUpload);
               }}
-            >
+            className="registerButton">
               register
             </button>
           </div>

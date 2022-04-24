@@ -6,7 +6,7 @@
     width: 20vw;
     height: 5vw;
     border-radius: 30px;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 900;
     margin-top: 12vh;
     /* display: flex; */
@@ -14,6 +14,7 @@
     align-items: center;
     text-decoration: none;
     margin: 0 2vw 4vw 2vw;
+    padding: 2vw 4vw 2vw 4vw;
     /* margin-bottom: 10hv; */
   }
 
@@ -35,43 +36,79 @@
   display:block;
   margin:auto;
   height: 200px;
+  margin-top: 2vw;
 }
 .formContainer {
   text-align: center;
   align-items: center;
+  margin: 0 auto;
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 20vw;
 }
 .registerButton {
-  text-align: center;
-  align-items: center;
+  width: 15vw;
+  height: 4vw;
+  margin-top: 6vw;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.5vw;
+  margin-left: 42vw;
+  text-decoration: none;
+  padding: 0 2vw 0 2vw;
 }
 .buttonContainer{
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-top: 8vw;
 }
-.name {
+.act-name {
+  text-align: left;
+  font-weight: 400;
+  width: 100vw;
+  margin-left: 1.4vw;
+  margin-bottom: 0.3vw;
+}
+.name{
+  margin-top: 2vw;
   text-align: center;
+  font-size: 2vw;
 }
-
 .page-name-opt1{
-  font-size: 2.5vw;
+  font-size: 3vw;
   text-align: center;
-  background-color: black;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 30vw;
   margin: 0 auto;
 }
 .page-name-opt2{
-  font-size: 2.5vw;
+  font-size: 3vw;
   text-align: center;
-  background-color: black;
-  color: white;
+  margin-top: 10vw;
+  color: rgb(0, 0, 0);
   width: 50vw;
   margin: 0 auto;
+  font-weight: 700;
 }
 
 .file-opt{
   text-align: center;
-  margin: 0 auto;
+  position: absolute;
+  margin-left: 43vw;
+  margin-top: 2vw;
+}
+.item {
+  margin: 0.6vw 2vw 0 0vw;
+  width: 100%;
+  border-radius: 30px;
+  padding: 1vw 0 0 1vw;
+}
 
+.infoBox{
+  margin-top: 5vw;
 }

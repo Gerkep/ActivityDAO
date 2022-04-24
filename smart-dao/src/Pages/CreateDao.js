@@ -4,6 +4,9 @@ import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
 import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 
+import ACTIVITY_HALL_ABI from "../constants/abis/ActivitesHall.json";
+
+
 import "../style/createActivity.css"
 import { publishToIPFS } from "../utils/core";
 
@@ -28,7 +31,7 @@ const CreateDAO = (props) => {
         // navigate(`/activity/${transaction}`);
       }
       else{
-          console.log("error");
+          console.log("errorCreateDao");
       }
   }, [transaction])
 
@@ -60,12 +63,12 @@ const CreateDAO = (props) => {
         {/* {
         fields.map(item =>{ */}
             {/* return ( */}
-                <div>
+                <div className="activity-name-container">
                     <label className="act-name">Activity Name</label>
                     <textarea className="item" onChange={e => setNewDAOName(e.target.value)} />    
                 </div>
-                <div>
-                    <label className="act-name">Min Number of Participants</label>
+                <div className="activity-number-container">
+                    <label className="act-name">Min. Number of Participants</label>
                     <textarea className="item" onChange={e => setMinNumParticipants(e.target.value)} />    
                 </div>
         {/* )})
@@ -73,7 +76,7 @@ const CreateDAO = (props) => {
         <button
         onClick={async () => {
             console.log("parsing ", parseInt(minNumParticipants));
-            let tx = await withConfirmation(performTx(library,account, ActivitesHall[chainId],account,'deployActivity',[newDAOName,parseInt(minNumParticipants),1000000,OurToken[chainId],60]));
+            let tx = await withConfirmation(performTx(library,ACTIVITY_HALL_ABI ,account, ActivitesHall[chainId],account,'deployActivity',[newDAOName,parseInt(minNumParticipants),1000000,OurToken[chainId],60]));
             // let tx = 1;  
             console.log("TX: ", tx);
             setTransaction(tx);
@@ -81,7 +84,7 @@ const CreateDAO = (props) => {
         }}
         className="connect-btn-crAc"
         >
-        Perform tx
+        Submit
         </button>
         </div>
 
