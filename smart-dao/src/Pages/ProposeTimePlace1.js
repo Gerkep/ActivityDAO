@@ -2,7 +2,7 @@ import React, { useEffect, useState }  from 'react';
 // import "../style/checkinPage.css"
 import "../style/propTimePlace.css"
 
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -12,16 +12,27 @@ import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
 import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 import "../style/createActivity.css"
+import { ethers } from 'ethers';
 
 
 const ProposeTimePlace1 = () => {
 
     // const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const [value1, setValue1] = useState(new Date());
+    const [value2, setValue2] = useState(new Date());
+    const [value3, setValue3] = useState(new Date());
+
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
     // await provider.send("eth_requestAccounts", []);
     // const signer = provider.getSigner()
     // const activityContract = new ethers.Contract("0x79cF3c6F91123c72b986921030F429CA8c8ac437", ACTIVITY_ABI, provider);
 
     const [value, setValue] = useState(new Date());
+    const {id} = useParams();
+
+
+    
     const [transaction, setTransaction] = useState(null);
 
     const navigate = useNavigate();
@@ -29,11 +40,11 @@ const ProposeTimePlace1 = () => {
 
     useEffect(()=> {
         if(transaction){
-          //   console.log("hash: ", transaction.hash);
-          //   let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
-          //     navigate(`/activity/${data}`);
-          //   });
-          navigate(`/activity/${transaction}`);
+            //console.log("hash: ", transaction.hash);
+            // let myCommunityAddr = getComunnityFromTx(transaction.hash, library).then((data)=>{
+            //   navigate(`/activity/${data}`);
+            // });
+          navigate(`/activity/${id}`);
         }
         else{
             console.log("error");
@@ -44,8 +55,13 @@ const ProposeTimePlace1 = () => {
     console.log("MetaMask Info",account, library);
   
     console.log("Cur Name: ",newDAOName);
+
   
-    console.log("Datetime: ", Math.floor(value.getTime() / 1000));
+    console.log("Datetime1: ", Math.floor(value1.getTime() / 1000));
+    console.log("Datetime2: ", Math.floor(value2.getTime() / 1000));
+    console.log("Datetime3: ", Math.floor(value3.getTime() / 1000));
+
+
 
 
     return(
@@ -63,18 +79,40 @@ const ProposeTimePlace1 = () => {
                             <DateTimePicker
                             renderInput={(props) => <TextField {...props} />}
                             label="DateTimePicker"
-                            value={value}
+                            value={value1}
                             onChange={(newValue) => {
-                            setValue(newValue);
+                            setValue1(newValue);
+                            }}
+                            />
+                        </LocalizationProvider>
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DateTimePicker
+                            renderInput={(props) => <TextField {...props} />}
+                            label="DateTimePicker"
+                            value={value2}
+                            onChange={(newValue) => {
+                            setValue2(newValue);
+                            }}
+                            />
+                        </LocalizationProvider>
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DateTimePicker
+                            renderInput={(props) => <TextField {...props} />}
+                            label="DateTimePicker"
+                            value={value3}
+                            onChange={(newValue) => {
+                            setValue3(newValue);
                             }}
                             />
                         </LocalizationProvider>
                 </div>  
+                
 
                 <button
                     onClick={async () => {
-                        //let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
-                        let tx = 1;  
+                        let valArr = [[Math.floor(value1.getTime() / 1000)],[Math.floor(value2.getTime() / 1000)],[Math.floor(value3.getTime() / 1000)]]
+                        let tx = await withConfirmation(performTx(library,ACTIVITY_ABI,account, id,account,'proposeLocation',[newDAOName,valArr]));
+                        //let tx = 1;  
                         console.log("TX: ", tx);
                         setTransaction(tx);
                     }}
