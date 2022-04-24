@@ -8,5 +8,5 @@ export const OurToken = {
 }
 export const ActivitesHall = {
     80001 : '0x30f38906eFa003244bE583e49E362f57130FA056',
-    0xafcee83030b95 : '0xBf2e49e91dbeFBAf82c5Bb1Ca265d30A16E2Cb30',
+    0xafcee83030b95 : '0xA8E61B2283D98270ab73C1fdE6D3C9881079B8f7',
 }

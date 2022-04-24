@@ -334,6 +334,71 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_locationId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_dateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDatesProposed",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Activity.Date",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_locationId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_dateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDatesProposedVotes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "positiveVoteNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "negativeVoteNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalVoteNumber",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "name": "getResultVoting",
       "outputs": [],

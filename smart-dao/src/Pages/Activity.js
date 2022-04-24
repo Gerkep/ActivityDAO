@@ -5,13 +5,28 @@ import { useNavigate } from 'react-router-dom';
 import {ethers} from "ethers";
 import ACTIVITY_ABI from "../constants/abis/Activity.json";
 import { getComunnityFromTx, performTx, withConfirmation } from "../utils/core";
-import { useWeb3React } from '@web3-react/core';
+import { useWeb3React } from "@web3-react/core";
 
 
 import "../style/daoDashboard.css"
 import { Proposals} from "../constants/SampleData";
+import { getProposals } from "../utils/core";
 const Activity = () => {
+  const {library, account, chainId} = useWeb3React();
+  const [myList, setMyList] = useState(null);
+  // getTopActivities(library,chainId,10).then((data)=>{
+  //   setMyList(data)
+  // });
   const {id} = useParams();
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      getProposals(library,chainId,null,id).then((list)=>{
+        setMyList(list);
+      });
+    }, 10000);
+  
+    return () => clearInterval(intervalId);
+  }, []);
   const navigate = useNavigate();
   const [transactionJoin, setTransactionJoin] = useState(null);
   const [transactionResults, setTransactionResults] = useState(null);
@@ -44,14 +59,19 @@ useEffect(()=> {
   }
 }, [transactionResults])
 
-  const {account , library} = useWeb3React();
-
   const renderProposals = () => {
-    return Proposals.map(item => {
-      return(
-        <VotingRow location={item.location} proposer={item.proposer} timeOptions={item.times} remainingTime={item.deadline}> </VotingRow>
-      )
+    if(myList) {
+      return myList.map(item => {
+        return (
+          <VotingRow location={item.location} proposer={item.proposer} timeOptions={item.times} remainingTime={item.deadline}> </VotingRow>
+        )
     })
+    }else{
+      return (
+        <label>Loading Proposals ...</label>
+      )
+    }
+    
   }
   return (
     <div>
