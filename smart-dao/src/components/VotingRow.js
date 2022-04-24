@@ -55,13 +55,11 @@ const VotingRow = (props) => {
 
     }
 
-    // useEffect(()=>{
-    //     console.log(submit);
-    // },[submit])
+    useEffect(()=>{
+        console.log(submit);
+    },[submit])
     // const trackindex = (e) => {
-    //     let newArray = submit;
-    //     newArray[e] = !newArray[e];
-    //     setSubmit(newArray);
+
     // }
 
     return (
@@ -84,7 +82,15 @@ const VotingRow = (props) => {
                         return (
                             <div className="voting-box">
                                 <button className="approve-voting-btn">{moment(element.time).format('MM-DD HH:mm:ss')}</button>
-                                <input key={i} onChange={()=>{trackindex(i)}} type="checkbox" className='time-checkbox'/>
+                                <input key={i} onChange={()=>{
+                                            let newArray = Array.from(submit);
+                                            if(newArray[i]==0){
+                                                newArray[i] = 1;
+                                            }else {
+                                                newArray[i] = 0;
+                                            }
+                                            setSubmit(newArray);
+                                }} type="checkbox" className='time-checkbox'/>
                                 <p className="votes-counter">{element.votes}</p>
                             </div>
                         )
