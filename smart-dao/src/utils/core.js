@@ -220,7 +220,8 @@ export async function getTopActivities (library,chainID, numAct){
         newList.push(
             {
                 name : name,
-                deadline : deadline
+                deadline : deadline,
+                hash : currAct
             }
         )
 
@@ -233,7 +234,8 @@ export async function getTopActivities (library,chainID, numAct){
         let dateFinal = moment(item.deadline).format('YYYY-MM-DD HH:mm:ss');
         return {
          name : item.name,
-         deadline : dateFinal
+         deadline : dateFinal,
+         hash : item.hash
         }
     })
 
