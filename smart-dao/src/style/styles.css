@@ -4,6 +4,8 @@
 }
 body{
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(#00d2ff, #3a7bd5 60%);
+  height: 100vh;
 }
 .App {
     text-align: center;
@@ -18,7 +20,7 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: 0;
+    margin-top: -5vw;
   }
   .connect-btn{
     font-family: 'Montserrat', sans-serif;

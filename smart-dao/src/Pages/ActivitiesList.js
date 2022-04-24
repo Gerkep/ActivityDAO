@@ -42,7 +42,7 @@ const ActivitiesList = () => {
   return (
     <div>
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
-      <h1 className="page-name">Activities</h1>
+      <h1 className="page-name">ACTIVITIES</h1>
       <div className="votings-container">
           {generateActivitiesList()}
       </div>
