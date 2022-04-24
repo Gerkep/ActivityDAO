@@ -13,6 +13,7 @@ import { JsonRpcProvider } from "@ethersproject/providers";
 import { VaultFactoryAddress, ActivitesHall, OurToken } from "../constants/Addresses";
 import { getAvatar } from "../assets/avatar";
 import axios from "axios";
+import moment from 'moment';
 import { Buffer } from "buffer";
 
 export const performTx = async (
@@ -206,7 +207,42 @@ export async function getTopActivities (library,chainID, numAct){
 
     let cAddress = ActivitesHall[chainID]
     let contract = getContract(cAddress,ACTIVITY_HALL_ABI,library);
-    let num = contract['getTotal']();
-    console.log(num);
-    return [];
+    let num = (await contract['getTotal']()).toNumber();
+    // console.log(num.toNumber());
+    let newList = [];
+    for(let i=0;i<num;i++){
+        let currAct = await contract['activities'](i);
+        let myContract = getContract(currAct,ACTIVITY_ABI,library);
+        let name = await myContract['name']();
+        let deadline = await myContract['endingTimeForConsensus']();
+        deadline = parseInt(deadline * 1000);
+        // let dateFinal = moment(deadline).format('YYYY-MM-DD HH:mm:ss');
+        newList.push(
+            {
+                name : name,
+                deadline : deadline
+            }
+        )
+
+    }
+    let now = Date.now();
+    newList = newList.filter(item => item.deadline > now);
+    // console.log('filteredlist',newList);
+    newList = newList.sort(function(a,b){return a.deadline - b.deadline});
+    newList = newList.map((item)=>{
+        let dateFinal = moment(item.deadline).format('YYYY-MM-DD HH:mm:ss');
+        return {
+         name : item.name,
+         deadline : dateFinal
+        }
+    })
+
+    if(!numAct){
+        return newList;
+    }
+    if(newList.length > numAct){
+        newList = newList.slice(0,3);
+    }
+    // console.log(newList);
+    return newList;
 }
