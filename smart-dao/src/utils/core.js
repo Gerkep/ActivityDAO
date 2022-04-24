@@ -248,3 +248,35 @@ export async function getTopActivities (library,chainID, numAct){
     // console.log(newList);
     return newList;
 }
+export async function getProposals (library,chainID, numAct, id){
+    if(!library){
+        library = new JsonRpcProvider(
+            "https://amsterdam.skalenodes.com/v1/attractive-muscida"
+          );
+          chainID = 0xafcee83030b95;
+    }
+    let contract = getContract(id,ACTIVITY_ABI,library);
+    let numLocations = (await contract['locationCursor']()).toNumber();
+    console.log(numLocations);
+    let newList = [];
+    for(let i=0;i<numLocations;i++){
+        let proposal = await contract.locationsProposed(i);
+        let numDates = proposal.datesCursor.toNumber();
+        let datesArray =[];
+        let times =[];
+        for(let j=0;j<numDates;j++){
+            let currDate = await contract.getDatesProposed(i,j);
+            let currDateVotes = await contract.getDatesProposedVotes(i,j);
+            times.push({
+                time : currDate[0].toNumber(),
+                votes : currDateVotes.positiveVoteNumber.toNumber()
+            })
+        }
+        newList.push({
+            location : proposal.name,
+            proposer : proposal.proposer,
+            times : times
+        })
+    }
+   return newList;
+}

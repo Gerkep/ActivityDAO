@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/votingRow.css"
-
+import moment from "moment";
 // class VotingRow extends React.Component {
 
 
@@ -33,7 +33,7 @@ const VotingRow = (props) => {
             <button className="submit-times">Submit</button>
             <div className="voting-about">
                 <h2 className="voting-name">{props.location}</h2>
-                <p className="voting-description">{props.proposer}</p>
+                <p className="voting-description"></p>
                 <p className="voting-description">{props.remainingTime}</p>
 
             </div>
@@ -42,7 +42,7 @@ const VotingRow = (props) => {
                     timeOptions.map(element => {
                         return (
                             <div className="voting-box">
-                                <button className="approve-voting-btn">{element.time}</button>
+                                <button className="approve-voting-btn">{moment(element.time).format('MM-DD HH:mm:ss')}</button>
                                 <input type="checkbox" className='time-checkbox'/>
                                 <p className="votes-counter">{element.votes}</p>
                             </div>
