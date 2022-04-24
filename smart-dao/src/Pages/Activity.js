@@ -32,7 +32,6 @@ const Activity = () => {
 }, [transaction])
   const {account , library} = useWeb3React();
 
-
   const renderProposals = () => {
     return Proposals.map(item => {
       return(
