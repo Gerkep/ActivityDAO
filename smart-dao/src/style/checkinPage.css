@@ -23,7 +23,7 @@
 }
 .addresses-list{
     overflow-y: scroll;
-    max-height: 20vw;
+    max-height: 23vw;
 }
 .checkin-header{
     font-size: 2vw;
@@ -33,7 +33,6 @@
     margin-top: 2vw;
     height: 2vw;
     width: 20vw;
-    padding-left: 1vw;
     border-radius: 30px;
 }
 .checkin-checkbox{
@@ -51,7 +50,7 @@
 .stake-claim-btn{
     width: 20vw;
     height: 4vw;
-    margin-top: 2vw;
+    margin: 2vw 1vw 0 1vw;
     background-color: black;
     color: white;
     border-radius: 30px;
@@ -63,4 +62,7 @@
     text-decoration: none;
     padding: 0 2vw 0 2vw;
     cursor: pointer;
+}
+.checkin-btns{
+    display: flex;
 }
