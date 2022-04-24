@@ -26,7 +26,7 @@ class App extends React.Component {
                 <Route path="/checkin/:id" element={<Checkin/>} />
                 <Route exact path='/CreateDao' element={<CreateDAO/>} />
                 <Route exact path='/activities' element={<ActivitiesList/>} />
-                <Route exact path='/proposeTimePlace1' element={<ProposeTimePlace1/>} />
+                <Route path='/proposeTimePlace1/:id' element={<ProposeTimePlace1/>} />
 
             </Routes>
             </div>

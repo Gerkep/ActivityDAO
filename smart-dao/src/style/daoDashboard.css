@@ -95,9 +95,11 @@
     text-decoration: none;
     padding: 0 2vw 0 2vw;
 }
-
-.stake-claim-btn{
-    width: 20vw;
+.propose-btn{
+    position: absolute;
+    right: 4vw;
+    top: -2vw;
+    width: 18vw;
     height: 4vw;
     margin-top: 3vw;
     background-color: black;
