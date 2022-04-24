@@ -5,11 +5,19 @@ export const Proposals = [
         location : 'Malaysia',
         times : [
             {
-                time:'11:00pm - 12pm',
+                time:'12:00pm',
                 votes: 4
             },
             {
-                time:'9:00am - 11:00am',
+                time:'12:00pm',
+                votes: 4
+            },
+            {
+                time:'12:00pm',
+                votes: 4
+            },
+            {
+                time:'11:00am',
                 votes: 2
             }
         ],
@@ -21,11 +29,11 @@ export const Proposals = [
         location : 'Amsterdam',
         times : [
             {
-                time:'8:00pm - 12pm',
+                time:'12pm',
                 votes: 4
             },
             {
-                time:'4:00am - 11:00am',
+                time:'11:00am',
                 votes: 9
             }
         ],
@@ -37,11 +45,11 @@ export const Proposals = [
         location : 'Madrid',
         times : [
             {
-                time:'7:00pm - 12pm',
+                time:'12pm',
                 votes: 4
             },
             {
-                time:'9:00am - 11:00am',
+                time:'11:00am',
                 votes: 5
             }
         ],
@@ -53,11 +61,11 @@ export const Proposals = [
         location : 'Paris',
         times : [
             {
-                time:'10:00pm - 12pm',
+                time:'12pm',
                 votes: 6
             },
             {
-                time:'5:00am - 11:00am',
+                time:'11:00am',
                 votes: 7
             }
         ],
@@ -69,11 +77,11 @@ export const Proposals = [
         location : 'Paris',
         times : [
             {
-                time:'10:00pm - 12pm',
+                time:'12pm',
                 votes: 6
             },
             {
-                time:'5:00am - 11:00am',
+                time:'11:00am',
                 votes: 7
             }
         ],

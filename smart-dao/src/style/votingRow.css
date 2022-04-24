@@ -12,7 +12,15 @@
   
   .voting-about { grid-area: voting-about; }
   
-  .voting-interact { grid-area: voting-interact; display: flex; align-items: center; flex-wrap:wrap}
+  .voting-interact { 
+      grid-area: voting-interact; 
+      display: flex; 
+      align-items: center; 
+      flex-wrap:wrap;
+      height: 10vw;
+      overflow-y: scroll;
+      
+    }
 .voting-name{
     margin-bottom: 1vw;
     font-size: 2vw;
@@ -34,7 +42,7 @@
     justify-content:center;
 }
 .votes-counter{
-    margin-left: 4vw;
+    margin-left: 2.5vw;
     font-size: 1.5vw;
 }
 .join-activity-btn{
@@ -61,5 +69,20 @@
 .voting-box{
     width:100%;
     display:flex;
+    margin: 1vw;
 }
-  
+
+.submit-times{
+    position: absolute;
+    margin-left: 14vw;
+    padding: 0.5vw 1.2vw 0.5vw 1.2vw;
+    background-color: transparent;
+    border: solid 1.5px black;
+    border-radius: 30px;
+}
+.time-checkbox{
+    margin-left: 2.5vw;
+    margin-top: 0.5vw;
+    height: 1vw;
+    width: 1vw;
+}

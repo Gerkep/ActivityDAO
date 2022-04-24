@@ -30,6 +30,7 @@ const VotingRow = (props) => {
 
     return (
         <div className="voting-row">
+            <button className="submit-times">Submit</button>
             <div className="voting-about">
                 <h2 className="voting-name">{props.location}</h2>
                 <p className="voting-description">{props.proposer}</p>
@@ -42,6 +43,7 @@ const VotingRow = (props) => {
                         return (
                             <div className="voting-box">
                                 <button className="approve-voting-btn">{element.time}</button>
+                                <input type="checkbox" className='time-checkbox'/>
                                 <p className="votes-counter">{element.votes}</p>
                             </div>
                         )
