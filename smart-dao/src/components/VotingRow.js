@@ -42,7 +42,7 @@ const VotingRow = (props) => {
                     timeOptions.map(element => {
                         return (
                             <div className="voting-box">
-                                <button className="approve-voting-btn">{moment(element.time).format('MM-DD HH:mm:ss')}</button>
+                                <button className="approve-voting-btn">{moment(element.time).format('YYYY-MM-DD HH:mm:ss')}</button>
                                 <input type="checkbox" className='time-checkbox'/>
                                 <p className="votes-counter">{element.votes}</p>
                             </div>

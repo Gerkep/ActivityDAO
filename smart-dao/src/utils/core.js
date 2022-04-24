@@ -14,6 +14,7 @@ import { VaultFactoryAddress, ActivitesHall, OurToken } from "../constants/Addre
 import { getAvatar } from "../assets/avatar";
 import axios from "axios";
 import moment from 'moment';
+import { colors } from "../constants/SampleData";
 import { Buffer } from "buffer";
 
 export const performTx = async (
@@ -108,7 +109,7 @@ export async function publishToIPFS(metadata) {
   const someData = new Blob([metadata]);
   console.log(someData);
   const cid = await ipfs.storeBlob(someData);
-  // console.log(cid);
+  console.log(cid);
   return `https://ipfs.io/ipfs/${cid}`;
 }
 
@@ -124,8 +125,8 @@ export async function createRandomAvatar(gender, chainID, library, account) {
   let generatedRandom = await contract["getRandom"]();
   let stringGenerated = generatedRandom.toString().substring(10, 15);
   stringGenerated = `0x${stringGenerated}`;
-  let randomNumber = parseInt(stringGenerated, 16) % 10; //from 1 to 10
-  const myAvatar = getAvatar();
+  let randomNumber = parseInt(stringGenerated, 16) % 5; //from 1 to 10
+  const myAvatar = getAvatar(colors[randomNumber]);
   const cleanSVG = myAvatar.replace(/[\r\n]+/gm, "");
   var decoded = unescape(encodeURIComponent(cleanSVG));
   const image = "data:image/svg+xml;base64," + btoa(decoded);
@@ -269,7 +270,7 @@ export async function getProposals (library,chainID, numAct, id){
             let currDate = await contract.getDatesProposed(i,j);
             let currDateVotes = await contract.getDatesProposedVotes(i,j);
             times.push({
-                time : currDate[0].toNumber(),
+                time : currDate[0].toNumber()*1000,
                 votes : currDateVotes.positiveVoteNumber.toNumber()
             })
         }

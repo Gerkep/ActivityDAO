@@ -89,3 +89,11 @@ export const Proposals = [
     },
     
 ]
+
+export const colors = [
+    'E4B692',
+    '2596be',
+    '2596be',
+    'd0ff00',
+    'f29b97'
+]
