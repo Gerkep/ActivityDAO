@@ -13,6 +13,7 @@ import { useWeb3React } from '@web3-react/core';
 import { useNavigate } from 'react-router-dom';
 import "../style/createActivity.css"
 import { ethers } from 'ethers';
+import ACTIVITY_ABI from "../constants/abis/Activity.json";
 
 
 const ProposeTimePlace1 = () => {
