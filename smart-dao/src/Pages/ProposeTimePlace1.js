@@ -2,7 +2,7 @@ import React, { useEffect, useState }  from 'react';
 // import "../style/checkinPage.css"
 import "../style/propTimePlace.css"
 
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -26,6 +26,9 @@ const ProposeTimePlace1 = () => {
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     // await provider.send("eth_requestAccounts", []);
+
+    const {id} = useParams();
+
 
     
     const [transaction, setTransaction] = useState(null);
