@@ -21,6 +21,11 @@
 .ta-PTT{
     width: 18vw;
     position: absolute;
+    background-color: transparent;
+    border: solid 2px black;
+    color: black;
+    border-radius: 30px;
+    padding: 0.8vw 0vw 0vw 0.8vw;
 }
 .checkin-input-PTT{
     display: flex;

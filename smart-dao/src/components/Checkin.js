@@ -52,7 +52,6 @@ const Checkin = () => {
                 <div className='addresses-list'>
                     {generateAddresses()}
                 </div>
-                <button className='stake-claim-btn'>Check-in</button>
                 <div className='checkin-btns'>
                     <button className='stake-claim-btn'>Check-in</button>
                     <button className='stake-claim-btn'                
