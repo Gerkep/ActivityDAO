@@ -12,6 +12,9 @@ const CreateDAO = (props) => {
     let navigate = useNavigate();
 
   const [newDAOName, setNewDAOName] = useState('');
+  const [minNumParticipants, setMinNumParticipants] = useState('');
+
+
   const [transaction, setTransaction] = useState(null);
   useEffect(()=> {
       if(transaction){
@@ -38,6 +41,11 @@ const CreateDAO = (props) => {
           name : 'Activity Name',
           element : newDAOName,
           setter : setNewDAOName
+      },
+      {
+          name : 'Min Number of Participants',
+          element : minNumParticipants,
+          setter : setMinNumParticipants
       }
   ]
 
@@ -57,7 +65,7 @@ const CreateDAO = (props) => {
         }
         <button
         onClick={async () => {
-            let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
+            let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName,minNumParticipants,1000000,""]));
             // let tx = 1;  
             console.log("TX: ", tx);
             setTransaction(tx);

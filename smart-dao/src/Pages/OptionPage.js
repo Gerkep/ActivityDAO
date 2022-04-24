@@ -5,7 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 import { Link } from "react-router-dom";
 import { createRandomAvatar } from "../utils/core";
 import { getUserData } from "../utils/core";
-// import "./optionPage.css";
+import "../style/optionPage.css";
 import { editUserInfo } from "../utils/core";
 
 function OptionPage() {
@@ -33,20 +33,23 @@ function OptionPage() {
     <div className="mainContainer">
       {userProfile && userProfile.name ? (
         <div className="infoBox">
+          <div className="page-name-opt1">Welcome Back {userProfile.name} </div>
           <img className="profilePic" src={userProfile.url}></img>
           <div className="name">{userProfile.name}</div>
         </div>
       ) : (
         <div className="infoBox">
-          <div className="info">you are not registered in our database</div>
-          <input type="file" name="myImage" onChange={(e)=>{setImageToUpload(e.target.files[0])}} />
+          <div className="page-name-opt2">Become a Member of the Community!</div>
           <div className="formContainer">
-            <label className="act-name">name</label>
+            <label className="act-name">Name</label>
             <textarea
               className="item"
               onChange={(e) => setNewUserName(e.target.value)}
             />
           </div>
+  
+          <input className="file-opt" type="file" name="myImage" onChange={(e)=>{setImageToUpload(e.target.files[0])}} />
+
           <div className="registerButton">
             <button
               onClick={async () => {
