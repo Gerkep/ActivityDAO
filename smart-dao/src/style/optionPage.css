@@ -52,3 +52,26 @@
 .name {
   text-align: center;
 }
+
+.page-name-opt1{
+  font-size: 2.5vw;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 30vw;
+  margin: 0 auto;
+}
+.page-name-opt2{
+  font-size: 2.5vw;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.file-opt{
+  text-align: center;
+  margin: 0 auto;
+
+}

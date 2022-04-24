@@ -18,13 +18,14 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .checkin-header{
     font-size: 2vw;
-    margin-top: 2vw;
+    margin-top: 1.5vw;
 }
 .address-input{
-    margin-top: 5vw;
+    margin-top: 2vw;
     height: 2vw;
     width: 20vw;
     padding-left: 1vw;
@@ -32,7 +33,7 @@
     border: 1px solid black;
 }
 .checkin-checkbox{
-    margin-top: 5vw;
+    margin-top: 2vw;
     margin-left: 3vw;
     height: 2vw;
     width: 2vw;
@@ -42,4 +43,20 @@
     margin-left: 32vw;
     text-decoration: none;
     font-weight: 700;
+}
+.stake-claim-btn{
+    width: 20vw;
+    height: 4vw;
+    margin-top: 2vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+    display :flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    padding: 0 2vw 0 2vw;
+    cursor: pointer;
 }

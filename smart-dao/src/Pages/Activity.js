@@ -19,8 +19,9 @@ const Activity = () => {
   return (
     <div>
       <Link to="/" className="main-page-link">MAIN PAGE</Link>
-      <Link to="/proposeTimePlace1" type="button" className='create-idea-btn'>Propose Time/Place</Link>
+      <button className="propose-btn" onClick={() => navigate(`/proposeTimePlace1/${id}`)}>Propose Time/Place</button>
       <button className="checkin-btn" onClick={() => navigate(`/checkin/${id}`)}>Check in</button>
+      <button className="getvotes-btn" onClick={() => navigate(`/results/${id}`)}>Get results</button>
       <h1 className="page-name">Barcelona Soccer Team</h1>
       <div className="votings-container">
         {renderProposals()}

@@ -9,6 +9,7 @@ import OptionPage from './Pages/OptionPage'
 import CreateDAO from "./Pages/CreateDao.js";
 import ProposeTimePlace1 from "./Pages/ProposeTimePlace1.js"
 import Checkin from "./components/Checkin.js";
+import Result from "./Pages/Result.js"
 
 import { Route, Routes} from 'react-router-dom';
 import ActivitiesList from "./Pages/ActivitiesList.js";
@@ -20,11 +21,12 @@ class App extends React.Component {
             <Routes>
                 <Route exact path='/' element={<WelcomePage/>} />
                 <Route exact path='/option' element={<OptionPage/>} />
+                <Route exact path='/results/:id' element={<Result/>} />
                 <Route exact path='/activity/:id' element={<Activity/>} />
                 <Route path="/checkin/:id" element={<Checkin/>} />
                 <Route exact path='/CreateDao' element={<CreateDAO/>} />
                 <Route exact path='/activities' element={<ActivitiesList/>} />
-                <Route exact path='/proposeTimePlace1' element={<ProposeTimePlace1/>} />
+                <Route path='/proposeTimePlace1/:id' element={<ProposeTimePlace1/>} />
 
             </Routes>
             </div>
