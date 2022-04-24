@@ -63,12 +63,12 @@ const CreateDAO = (props) => {
         {/* {
         fields.map(item =>{ */}
             {/* return ( */}
-                <div>
+                <div className="activity-name-container">
                     <label className="act-name">Activity Name</label>
                     <textarea className="item" onChange={e => setNewDAOName(e.target.value)} />    
                 </div>
-                <div>
-                    <label className="act-name">Min Number of Participants</label>
+                <div className="activity-number-container">
+                    <label className="act-name">Min. Number of Participants</label>
                     <textarea className="item" onChange={e => setMinNumParticipants(e.target.value)} />    
                 </div>
         {/* )})
@@ -84,7 +84,7 @@ const CreateDAO = (props) => {
         }}
         className="connect-btn-crAc"
         >
-        Perform tx
+        Submit
         </button>
         </div>
 
