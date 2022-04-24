@@ -2,12 +2,15 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import VotingRow from "../components/VotingRow";
 import { useNavigate } from 'react-router-dom';
+import {ethers} from "ethers"
 
 import "../style/daoDashboard.css"
 import { Proposals} from "../constants/SampleData";
 const Activity = () => {
   const {id} = useParams();
   const navigate = useNavigate();
+
+
 
   const renderProposals = () => {
     return Proposals.map(item => {

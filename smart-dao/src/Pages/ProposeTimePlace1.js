@@ -18,7 +18,10 @@ import "../style/createActivity.css"
 
 const ProposeTimePlace1 = () => {
 
-    const [value, setValue] = useState(new Date());
+    const [value1, setValue1] = useState(new Date());
+    const [value2, setValue2] = useState(new Date());
+    const [value3, setValue3] = useState(new Date());
+
     const [transaction, setTransaction] = useState(null);
 
     const navigate = useNavigate();
@@ -42,7 +45,11 @@ const ProposeTimePlace1 = () => {
   
     console.log("Cur Name: ",newDAOName);
   
-    console.log("Datetime: ", Math.floor(value.getTime() / 1000));
+    console.log("Datetime1: ", Math.floor(value1.getTime() / 1000));
+    console.log("Datetime2: ", Math.floor(value2.getTime() / 1000));
+    console.log("Datetime3: ", Math.floor(value3.getTime() / 1000));
+
+
 
 
     return(
@@ -60,18 +67,39 @@ const ProposeTimePlace1 = () => {
                             <DateTimePicker
                             renderInput={(props) => <TextField {...props} />}
                             label="DateTimePicker"
-                            value={value}
+                            value={value1}
                             onChange={(newValue) => {
-                            setValue(newValue);
+                            setValue1(newValue);
+                            }}
+                            />
+                        </LocalizationProvider>
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DateTimePicker
+                            renderInput={(props) => <TextField {...props} />}
+                            label="DateTimePicker"
+                            value={value2}
+                            onChange={(newValue) => {
+                            setValue2(newValue);
+                            }}
+                            />
+                        </LocalizationProvider>
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DateTimePicker
+                            renderInput={(props) => <TextField {...props} />}
+                            label="DateTimePicker"
+                            value={value3}
+                            onChange={(newValue) => {
+                            setValue3(newValue);
                             }}
                             />
                         </LocalizationProvider>
                 </div>  
+                
 
                 <button
                     onClick={async () => {
-                        //let tx = await withConfirmation(performTx(library,account, '0x30f38906eFa003244bE583e49E362f57130FA056',account,'deployDAO',[newDAOName]));
-                        let tx = 1;  
+                        let tx = await withConfirmation(performTx(library,account, id,account,'deployActivity',[newDAOName,parseInt(minNumParticipants),1000000,OurToken[chainId],60]));
+                        //let tx = 1;  
                         console.log("TX: ", tx);
                         setTransaction(tx);
                     }}
