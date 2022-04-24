@@ -2,7 +2,7 @@ import { getAddress } from "@ethersproject/address";
 import { Contract } from "@ethersproject/contracts";
 import { AddressZero, MaxUint256 } from "@ethersproject/constants";
 import { BigNumber } from "@ethersproject/bignumber";
-import abi from "../constants/abis/VaultFactory.json";
+import abi from "../constants/abis/ActivitesHall.json";
 import USER_REGISTRY_ABI from "../constants/abis/UserRegistry.json";
 import { NFTStorage, Bob } from "nft.storage";
 import { ethers } from "ethers";
