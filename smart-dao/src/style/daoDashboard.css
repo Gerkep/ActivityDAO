@@ -114,3 +114,21 @@
     padding: 0 2vw 0 2vw;
 }
   
+.joinAct-btn{
+    position: absolute;
+    right: 60vw;
+    top: -2vw;
+    width: 15vw;
+    height: 4vw;
+    margin-top: 3vw;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+    display :flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    padding: 0 2vw 0 2vw;
+}
