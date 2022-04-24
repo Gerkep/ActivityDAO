@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ActivityRowForWelcome from "../components/ActivityRowForWelcome";
 import { Activities } from "../constants/SampleActivities";
+import { useWeb3React } from "@web3-react/core";
 
 import "../style/daoDashboard.css"
+import { getTopActivities } from "../utils/core";
 const ActivitiesListforWelcome = (props) => {
 
+  const {library, account, chainId} = useWeb3React();
+  // const [myList, setMyList] = useState([]);
+
+  // getTopActivities(library,chainId,10).then((data)=>{
+  //   setMyList(data)
+  // });
 
   const generateActivitiesList = () => {
     return Activities.slice(0,3).map(activity => {

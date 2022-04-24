@@ -4,11 +4,13 @@ import { AddressZero, MaxUint256 } from "@ethersproject/constants";
 import { BigNumber } from "@ethersproject/bignumber";
 import abi from "../constants/abis/ActivitesHall.json";
 import USER_REGISTRY_ABI from "../constants/abis/UserRegistry.json";
+import ACTIVITY_ABI from "../constants/abis/Activity.json";
+import ACTIVITY_HALL_ABI from "../constants/abis/ActivitesHall.json";
 import { NFTStorage, Bob } from "nft.storage";
 import { ethers } from "ethers";
 import { hexStripZeros, TransactionDescription } from "ethers/lib/utils";
 import { JsonRpcProvider } from "@ethersproject/providers";
-import { VaultFactoryAddress } from "../constants/Addresses";
+import { VaultFactoryAddress, ActivitesHall, OurToken } from "../constants/Addresses";
 import { getAvatar } from "../assets/avatar";
 import axios from "axios";
 import { Buffer } from "buffer";
@@ -193,4 +195,18 @@ export async function editUserInfo(library, account, chainId, name, pic) {
   }
 
   return;
+}
+export async function getTopActivities (library,chainID, numAct){
+    if(!library){
+        library = new JsonRpcProvider(
+            "https://amsterdam.skalenodes.com/v1/attractive-muscida"
+          );
+          chainID = 0xafcee83030b95;
+    }
+
+    let cAddress = ActivitesHall[chainID]
+    let contract = getContract(cAddress,ACTIVITY_HALL_ABI,library);
+    let num = contract['getTotal']();
+    console.log(num);
+    return [];
 }
