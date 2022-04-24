@@ -48,7 +48,7 @@ const ProposeTimePlace1 = () => {
           navigate(`/activity/${id}`);
         }
         else{
-            console.log("error");
+            console.log("error ppt1");
         }
     }, [transaction])
 

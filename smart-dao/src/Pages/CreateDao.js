@@ -31,7 +31,7 @@ const CreateDAO = (props) => {
         // navigate(`/activity/${transaction}`);
       }
       else{
-          console.log("error");
+          console.log("errorCreateDao");
       }
   }, [transaction])
 
