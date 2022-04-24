@@ -9,10 +9,6 @@ const Activity = () => {
   const {id} = useParams();
   const navigate = useNavigate();
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  // await provider.send("eth_requestAccounts", []);
-  const signer = provider.getSigner()
-  const ActivityContract = new ethers.Contract("0x79cF3c6F91123c72b986921030F429CA8c8ac437", abi, provider);
 
   const renderProposals = () => {
     return Proposals.map(item => {
