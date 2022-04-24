@@ -9,3 +9,6 @@ The token used is an ERC20 allowing users to participate in the DAO by staking a
 
 Firstly, in order to participate in the DAO, the user needs to connect himself by connecting his Wallet. So we used Metamask there. The user is also able to upload a file representing his avatar. The avatar file is going to be stored on-chain on IPFS as a NFT for the user. 
 Secondly, we use SKALE network to provide a DAO for free for everyone : no gas fees, quick to deploy and to interact with the contract. It also allows us to build in a near future our own league with the RNG providing a full random matchmaking between teams in a sport competition for example. 
+
+## Backend Code
+You can access the backend code in the following link : https://github.com/benjaminsalon/smartDAOBackend
