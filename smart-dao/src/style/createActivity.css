@@ -1,19 +1,11 @@
 .centered {
-    height: 100vh; /* Magic here */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.item {
-    margin: 0 2vw 0 2vw
-
-}
-
-.act-name{
-    margin: 0 2vw 0 2vw;
-    font-weight: bold;
-    font-size: 1.5vw;
+    flex-wrap: wrap;
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 8vw;
 }
 
 .connect-btn-crAc{
@@ -26,16 +18,21 @@
     border-radius: 15px;
     font-size: 1.5vw;
     font-weight: 900;
-    margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 0 2vw 0 2vw
+    padding: 2vw 4vw 2vw 4vw;
+    margin: 5vw;
+    cursor: pointer;
   }
 
 .header-name{
     font-size: 5vw;
     text-align: center;
     margin-top: 12vh;
+}
+
+.activity-number-container{
+    margin-top: 3vw;
 }
